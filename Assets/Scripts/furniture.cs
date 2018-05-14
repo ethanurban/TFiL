@@ -20,18 +20,23 @@ public class furniture : MonoBehaviour {
        if (other.gameObject.CompareTag("P1"))
         {
             levelManager.GetComponent<levelManagerScript>().settledP1 = true;
+            Debug.Log("player one is set!");
+
         }
         if (other.gameObject.CompareTag("P2"))
         {
             levelManager.GetComponent<levelManagerScript>().settledP2 = true;
+            Debug.Log("player two is set!");
         }
         if (other.gameObject.CompareTag("P3"))
         {
             levelManager.GetComponent<levelManagerScript>().settledP3 = true;
+            Debug.Log("player three is set!");
         }
         if (other.gameObject.CompareTag("P4"))
         {
             levelManager.GetComponent<levelManagerScript>().settledP4 = true;
+            Debug.Log("player four is set!");
         }
     }
 }
