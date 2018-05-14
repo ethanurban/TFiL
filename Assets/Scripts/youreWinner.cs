@@ -38,7 +38,7 @@ public class youreWinner : MonoBehaviour {
 		
 	}
 
-    // Update is called once per frame
+    // Update is called once perd frame
     void Update()
     {
         if (p1.transform.position.y < -7.3)
