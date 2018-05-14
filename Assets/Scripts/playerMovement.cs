@@ -9,6 +9,7 @@ public class playerMovement : MonoBehaviour {
     Vector3 movementSpeed;
     public int playerNum;
     bool lost;
+    public int jumpforce;
 
 	// Use this for initialization
 	void Start () {
@@ -39,10 +40,34 @@ public class playerMovement : MonoBehaviour {
             transform.localEulerAngles = new Vector3(0, angle, 0); //set facing direction to this angle
         }
 
-        transform.position += movementSpeed / 4;//Actually make the object move
+        transform.position += movementSpeed;//Actually make the object move
         if (Input.GetButtonDown("LB_" + playerNum) && grounded)
         {
-            rb.AddForce(new Vector3 (0, 800, 0));
+            rb.AddForce(new Vector3 (0, jumpforce, 0));
+        }
+        if (Input.GetButtonDown("RB_" + playerNum))
+        {
+            
+        }
+        
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("P1"))
+        {
+
+        }
+        if (collision.gameObject.CompareTag("P2"))
+        {
+
+        }
+        if (collision.gameObject.CompareTag("P3"))
+        {
+
+        }
+        if (collision.gameObject.CompareTag("P4"))
+        {
+
         }
     }
 }
